@@ -32,9 +32,8 @@ header {
 .list {
     display: grid;
     // grid-template-columns: repeat(auto-fit, minmax(min(190px, 100%), 1fr));
-    grid-template-columns: repeat(auto-fit, 190px);
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
     gap: 2rem 1rem;
-    max-width: 1000px;
 }
 
 .list__item {
@@ -88,6 +87,17 @@ input {
     box-shadow: 0px 0px 9px 1px #e4e4e4;
 }
 
+.icon {
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+}
+.svg-inline--fa {
+    filter: drop-shadow(0px 0px 3px rgb(179, 179, 179));
+    font-size: 1rem;
+}
+
 .btn {
     color: #fff;
     font-weight: 600;
@@ -97,10 +107,14 @@ input {
 }
 
 .list__delete {
+    color: #fff;
+    border: none;
+    background-color: transparent;
     position: absolute;
     right: 0.5rem;
     top: 0.5rem;
     padding: 0 0.5rem;
+    cursor: pointer;
 }
 
 .message {

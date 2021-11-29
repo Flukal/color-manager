@@ -61,6 +61,9 @@ function App() {
         }
 
         e.target.reset()
+
+        const res = await axios.get('/colors')
+        setColors(res.data)
     }
 
     function addMessage(msg) {
