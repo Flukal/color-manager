@@ -4,7 +4,7 @@
     "description": "Simple Colors Manager React App",
     "main": "index.js",
     "scripts": {
-        "start": "json-server --watch db.json",
+        "start": "json-server -p 3001 --watch db.json",
         "start:remote": "json-server https://jsonplaceholder.typicode.com/db/"
     },
     "author": "Flukal",

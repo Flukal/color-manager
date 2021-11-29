@@ -4,7 +4,7 @@ import ListColors from './components/ListColors'
 import Message from './components/Message'
 import axios from 'axios'
 
-axios.defaults.baseURL = 'http://localhost:3000'
+axios.defaults.baseURL = 'http://localhost:3001'
 
 function App() {
     const [colors, setColors] = useState([])
