@@ -35,8 +35,10 @@ function App() {
             addMessage('Color not deleted!')
         }
 
-        const hideColor = colors.filter((color) => color.id !== id)
-        setColors(hideColor)
+        // const hideColor = colors.filter((color) => color.id !== id)
+        // setColors(hideColor)
+        const res = await axios.get('/colors')
+        setColors(res.data)
     }
 
     function onChange(e) {

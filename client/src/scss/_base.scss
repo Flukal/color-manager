@@ -1,0 +1,37 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+main {
+    position: relative;
+    padding: 2rem;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: $font-text;
+    background-color: $clr-background;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-family: $font-title;
+    background-color: $clr-white;
+    box-shadow: $box-shadow;
+
+    h1 {
+        background-image: $grd-title;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+    }
+}
