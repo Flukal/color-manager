@@ -20,7 +20,7 @@ function CreateColor({ onSubmit, onChange }) {
         <form onSubmit={onSubmit}>
             <input onChange={onChange} type='text' name='name' required />
             <input onChange={onChange} type='text' name='hex' required />
-            <button>Create Color</button>
+            <button className='btn'>Create Color</button>
         </form>
     )
 }

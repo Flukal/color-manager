@@ -70,7 +70,7 @@ function App() {
     return (
         <div>
             <header>
-                <h1>Colors Manager</h1>
+                <h1>Color Manager</h1>
             </header>
             <main>
                 <Message message={message} />

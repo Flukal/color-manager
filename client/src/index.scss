@@ -8,6 +8,7 @@
 
 main {
     position: relative;
+    padding: 2rem;
 }
 
 body {
@@ -22,13 +23,17 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
+header {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
 .list {
     display: grid;
     // grid-template-columns: repeat(auto-fit, minmax(min(190px, 100%), 1fr));
     grid-template-columns: repeat(auto-fit, 190px);
-    grid-gap: 1rem;
-    gap: 1rem;
-    padding: 2rem;
+    gap: 2rem 1rem;
     max-width: 1000px;
 }
 
@@ -38,8 +43,11 @@ code {
     overflow: hidden;
     border-radius: 3px;
     position: relative;
+    transition: all cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.25s;
 
     &:hover {
+        transform: scale(1.04);
+        box-shadow: 0px 0px 11px 4px #cad4dc;
     }
 }
 
@@ -64,6 +72,30 @@ p {
     font-weight: 400;
 }
 
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 40%) 20%;
+    margin-bottom: 3rem;
+}
+
+input {
+    height: 30px;
+    margin-right: 0.5rem;
+    font-weight: 300;
+    padding: 0 0.5rem;
+    border-radius: 3px;
+    border: 1px solid #c2c2c2;
+    box-shadow: 0px 0px 9px 1px #e4e4e4;
+}
+
+.btn {
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    background-color: #264653;
+    box-shadow: 0px 0px 9px 1px #e4e4e4;
+}
+
 .list__delete {
     position: absolute;
     right: 0.5rem;
@@ -72,14 +104,16 @@ p {
 }
 
 .message {
-    height: 30px;
+    text-align: center;
+    border-radius: 3px;
+    padding: 0.3rem;
     width: 200px;
     margin: 0 auto;
     position: absolute;
     top: 0;
     left: 50%;
     transform: translate(-50%, -300%);
-    animation: showAlert ease-in-out 5s;
+    animation: showAlert ease-in-out 2.5s;
 
     &--success {
         background-color: aquamarine;
@@ -96,11 +130,11 @@ p {
     }
 
     5% {
-        transform: translate(-50%, 0%);
+        transform: translate(-50%, 254%);
     }
 
     95% {
-        transform: translate(-50%, 0%);
+        transform: translate(-50%, 254%);
     }
     100% {
         transform: translate(-50%, -300%);
