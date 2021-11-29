@@ -9,6 +9,7 @@
     box-shadow: $box-shadow;
     overflow: hidden;
     border-radius: 3px;
+    cursor: pointer;
     position: relative;
     transition: all cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.25s;
     -webkit-transform: translateZ(0);
