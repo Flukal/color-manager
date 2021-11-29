@@ -1,0 +1,108 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+main {
+    position: relative;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.list {
+    display: grid;
+    // grid-template-columns: repeat(auto-fit, minmax(min(190px, 100%), 1fr));
+    grid-template-columns: repeat(auto-fit, 190px);
+    grid-gap: 1rem;
+    gap: 1rem;
+    padding: 2rem;
+    max-width: 1000px;
+}
+
+.list__item {
+    height: 238px;
+    box-shadow: 1px 1px 3px 0px #b2a7a7;
+    overflow: hidden;
+    border-radius: 3px;
+    position: relative;
+
+    &:hover {
+    }
+}
+
+.list__color {
+    height: 58%;
+    margin-bottom: 1.8rem;
+}
+
+h3,
+p {
+    padding-left: 0.7rem;
+}
+
+h3 {
+    font-size: 1rem;
+    margin-bottom: 0.7rem;
+}
+
+p {
+    font-size: 0.85rem;
+    color: #837e7e;
+    font-weight: 400;
+}
+
+.list__delete {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+    padding: 0 0.5rem;
+}
+
+.message {
+    height: 30px;
+    width: 200px;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -300%);
+    animation: showAlert ease-in-out 5s;
+
+    &--success {
+        background-color: aquamarine;
+    }
+
+    &--error {
+        background-color: rgb(255, 134, 144);
+    }
+}
+
+@keyframes showAlert {
+    0% {
+        transform: translate(-50%, -300%);
+    }
+
+    5% {
+        transform: translate(-50%, 0%);
+    }
+
+    95% {
+        transform: translate(-50%, 0%);
+    }
+    100% {
+        transform: translate(-50%, -300%);
+    }
+}
