@@ -15,30 +15,22 @@ function App() {
     })
 
     useEffect(() => {
-        async function FetchColors() {
-            const res = await axios.get('/colors')
-            console.log(res.data)
-            setColors(res.data)
-        }
-        FetchColors()
+        fetchColors()
     }, [])
 
     async function handleDelete(id, e) {
         e.preventDefault()
-        console.log(id)
+
         try {
             await axios.delete(`/colors/${id}`)
-            console.log('Color deleted!')
+            console.log(`Color deleted!`)
             addMessage('Color deleted!')
         } catch (err) {
-            console.log('Color not deleted!')
-            addMessage('Color not deleted!')
+            console.log(`Cannot delete color with id: ${id}`, err)
+            addMessage('ERROR: color not deleted!')
         }
 
-        // const hideColor = colors.filter((color) => color.id !== id)
-        // setColors(hideColor)
-        const res = await axios.get('/colors')
-        setColors(res.data)
+        fetchColors()
     }
 
     function onChange(e) {
@@ -54,21 +46,30 @@ function App() {
         e.preventDefault()
 
         try {
-            await axios.post('/colors', state)
-            console.log('Color created!')
-            addMessage('Color created!')
+            if (!state.hex.match(/^#(?:[0-9a-fA-F]{3}){1,2}$/)) {
+                console.log(`${state.hex} is not a valid hex code`)
+                addMessage('Not a HEX code')
+            } else {
+                await axios.post('/colors', state)
+                console.log('Color created!')
+                addMessage('Color ' + state.name + ' created with HEX value: ' + state.hex)
+            }
         } catch (err) {
-            console.log('Color not created!')
-            addMessage('Color not created!')
+            console.log('ERROR while creating color: ', err)
+            addMessage('Error: color not created!')
         }
 
         e.target.reset()
 
+        fetchColors()
+    }
+
+    const fetchColors = async () => {
         const res = await axios.get('/colors')
         setColors(res.data)
     }
 
-    function addMessage(msg) {
+    const addMessage = (msg) => {
         setMessage((prev) => prev.concat(msg))
     }
 
