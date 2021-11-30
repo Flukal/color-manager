@@ -18,7 +18,7 @@ function App() {
         fetchColors()
     }, [])
 
-    async function handleDelete(id, e) {
+    const handleDelete = async (id, e) => {
         e.preventDefault()
 
         try {
@@ -33,7 +33,7 @@ function App() {
         fetchColors()
     }
 
-    function onChange(e) {
+    const onChange = (e) => {
         const value = e.target.value
 
         setState({
@@ -42,7 +42,7 @@ function App() {
         })
     }
 
-    async function onSubmit(e) {
+    const onSubmit = async (e) => {
         e.preventDefault()
 
         try {
