@@ -5,7 +5,7 @@
     background-color: #264653;
     box-shadow: $box-shadow;
 
-    @media screen and (max-width: 570px) {
+    @media screen and (max-width: 35.5rem) {
         grid-column: 1 / -1;
     }
 }

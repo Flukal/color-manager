@@ -1,14 +1,14 @@
 .list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
     gap: 2rem 1rem;
 }
 
 .list__item {
-    height: 230px;
+    height: 14.375rem;
     box-shadow: $box-shadow;
     overflow: hidden;
-    border-radius: 3px;
+    border-radius: $brd-radius;
     cursor: pointer;
     position: relative;
     transition: all cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.25s;

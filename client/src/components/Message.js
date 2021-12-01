@@ -5,7 +5,7 @@ function Message(props) {
         <>
             {props.message.map((msg, index) => {
                 return (
-                    <div key={index} className={`message ${msg === 'Color created!' || msg === 'Color deleted!' ? 'message--success' : 'message--error'}`}>
+                    <div key={index} className='message'>
                         <div>{msg}</div>
                     </div>
                 )

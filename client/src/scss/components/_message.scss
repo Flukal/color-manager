@@ -1,0 +1,41 @@
+.message {
+    text-align: center;
+    border-radius: $brd-radius;
+    box-shadow: $sdw-message;
+    color: $clr-white;
+    background-color: $clr-message;
+    padding: 0.5rem;
+    width: 400px;
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -300%);
+    animation: showAlert ease-in-out 3s;
+}
+
+@keyframes showAlert {
+    0% {
+        transform: translate(-50%, -300%);
+    }
+
+    5% {
+        transform: translate(-50%, 15%);
+    }
+
+    10% {
+        transform: translate(-50%, 5%);
+    }
+
+    90% {
+        transform: translate(-50%, 5%);
+    }
+
+    95% {
+        transform: translate(-50%, 15%);
+    }
+
+    100% {
+        transform: translate(-50%, -300%);
+    }
+}

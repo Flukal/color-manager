@@ -4,8 +4,7 @@ $clr-title: #264653;
 $clr-sub-text: #837e7e;
 $clr-background: #f5fcfe;
 $clr-white: #fff;
-$clr-success: #3ed0a5;
-$clr-error: rgb(255, 134, 144);
+$clr-message: $clr-title;
 
 // Gradiants
 
@@ -14,6 +13,9 @@ $grd-title: linear-gradient(to right, #264653 3%, #2a9d8f 38%, #e9c46a, #f4a261 
 
 $font-title: 'Francois One', sans-serif;
 $font-text: 'DM Sans', sans-serif;
+
+// Border
+$brd-radius: 3px;
 
 // Shadows
 

@@ -3,21 +3,21 @@ form {
     grid-template-columns: repeat(2, 40%) 20%;
     margin-bottom: 3rem;
 
-    @media screen and (max-width: 570px) {
-        grid-template-columns: repeat(2, 1fr);
+    @media screen and (max-width: 35.5rem) {
+        grid-template-columns: repeat(2, calc(50% - 0.5rem));
         grid-template-rows: repeat(2, 1fr);
         gap: 1rem 0.5rem;
     }
 }
 
 input {
-    height: 30px;
+    height: 2rem;
     padding: 0 0.5rem;
-    border-radius: 3px;
+    border-radius: $brd-radius;
     border: none;
     box-shadow: $sdw-input;
 
-    @media screen and (min-width: 570px) {
+    @media screen and (min-width: 35.5rem) {
         margin-right: 0.5rem;
     }
 }

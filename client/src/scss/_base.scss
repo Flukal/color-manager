@@ -8,7 +8,7 @@
 
 main {
     padding: 2rem;
-    max-width: 950px;
+    max-width: 59.3rem;
     margin: 0 auto;
 }
 
@@ -27,7 +27,7 @@ header {
     box-shadow: $box-shadow;
 
     h1 {
-        background-image: $grd-title;
+        background-image: $grd-title; // Gradiant-Color
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         -moz-background-clip: text;
