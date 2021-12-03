@@ -1,12 +1,12 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 
-function ListColors(props) {
+function ListColors({ colors, handleDelete }) {
     return (
         <section className='list'>
-            {props.colors.map((color) => (
+            {colors.map((color) => (
                 <div key={color.id} className='list__item'>
-                    <button onClick={(e) => props.handleDelete(color.id, e)} className='btn-icon'>
+                    <button onClick={(e) => handleDelete(color.id, e)} className='btn-icon'>
                         <FontAwesomeIcon icon={faTrashAlt} />
                     </button>
                     <div className='list__color' style={{ backgroundColor: color.hex }}></div>

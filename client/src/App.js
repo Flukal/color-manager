@@ -23,14 +23,12 @@ function App() {
 
         try {
             await axios.delete(`/colors/${id}`)
-            console.log(`Color deleted!`)
             addMessage('Color deleted!')
+
+            fetchColors()
         } catch (err) {
-            console.log(`Cannot delete color with id: ${id}`, err)
             addMessage('ERROR: color not deleted!')
         }
-
-        fetchColors()
     }
 
     const onChange = (e) => {
@@ -47,19 +45,16 @@ function App() {
 
         try {
             if (!state.hex.match(/^#(?:[0-9a-fA-F]{3}){1,2}$/)) {
-                console.log(`${state.hex} is not a valid hex code`)
-                addMessage('Not a HEX code')
+                addMessage(`Error: ${state.hex} not a valid HEX code`)
             } else {
                 await axios.post('/colors', state)
-                console.log('Color created!')
+
                 addMessage('Color ' + state.name + ' created with HEX value: ' + state.hex)
+                e.target.reset()
             }
         } catch (err) {
-            console.log('ERROR while creating color: ', err)
             addMessage('Error: color not created!')
         }
-
-        e.target.reset()
 
         fetchColors()
     }

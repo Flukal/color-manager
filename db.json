@@ -1,29 +1,34 @@
 {
-  "colors": [
-    {
-      "name": "Cornflower Blue",
-      "hex": "#6195ED",
-      "id": 1
-    },
-    {
-      "name": "Shamrock",
-      "hex": "#3ED0A5",
-      "id": 2
-    },
-    {
-      "name": "Ambra",
-      "hex": "#20A2CA",
-      "id": 3
-    },
-    {
-      "name": "Albert",
-      "hex": "#000921",
-      "id": 4
-    },
-    {
-      "name": "Albertino",
-      "hex": "#345356",
-      "id": 5
-    }
-  ]
+    "colors": [
+        {
+            "name": "Cornflower Blue",
+            "hex": "#6195ED",
+            "id": 1
+        },
+        {
+            "name": "Shamrock",
+            "hex": "#3ED0A5",
+            "id": 2
+        },
+        {
+            "name": "Ambra",
+            "hex": "#20A2CA",
+            "id": 3
+        },
+        {
+            "name": "Albert",
+            "hex": "#000921",
+            "id": 4
+        },
+        {
+            "name": "Albertino",
+            "hex": "#345356",
+            "id": 5
+        },
+        {
+            "name": "Nepal",
+            "hex": "#94acc1",
+            "id": 6
+        }
+    ]
 }

@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Message(props) {
+function Message({ message }) {
     return (
         <>
-            {props.message.map((msg, index) => {
+            {message.map((msg, index) => {
                 return (
                     <div key={index} className='message'>
                         <div>{msg}</div>
